@@ -607,6 +607,11 @@ section {
   color: var(--color-white);
   resize: none;
 }
+
+input, textarea {
+  margin: 10px 0 10px 0;
+}
+
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
 }
@@ -639,6 +644,7 @@ button {
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  max-height: 60px;
 }
 .main-btn .btn-text {
   padding: 0 2rem;
@@ -965,10 +971,10 @@ h1, .giphy-embed {
   }
 
   .main-title h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .main-title h2 span {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .main-title h2 .bg-text {
     font-size: 4rem;
