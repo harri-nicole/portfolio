@@ -257,11 +257,11 @@ section {
   background-color: var(--color-grey-5);
 }
 .about-container .left-about {
-  padding-right: 5rem;
+  padding-right: 2rem;
 }
 .about-container .left-about p {
   line-height: 2rem;
-  padding: 1rem;
+  padding: 0 0 1rem 0;
   color: var(--color-grey-1);
 }
 .about-container .left-about h4 {
@@ -641,9 +641,10 @@ button {
   align-items: center;
   overflow: hidden;
   max-height: 60px;
+  min-width: 235px;
 }
 .main-btn .btn-text {
-  padding: 0 2rem;
+  padding: 0 2rem 0 2rem;
 }
 .btn-text {
   color: var(--color-white);
