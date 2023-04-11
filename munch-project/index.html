@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>MUNCH</title>
+    <link
+      rel="shortcut icon"
+      href="images/pretzel-icon.png"
+      type="image/x-icon"
+    />
+
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Munch: Savor delicious traditional English cuisine from the comfort of your home! Enjoy a variety of classic dishes, freshly prepared and delivered straight to your door. Order now for an unforgettable dining experience.">
+    <meta name="robots" content="all" />
+    <meta name="googlebot" content="all" />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Manrope&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CDN FONTS  -->
+    <link href="https://fonts.cdnfonts.com/css/elinga" rel="stylesheet" />
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!--  NAVBAR ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- CSS -->
+    <link href="https://copyfonts.com/fonts/attari-salees.html" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header>
+      <!-- LOGO -->
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img
+            id="pretzel"
+            src="./images/loading-pretzel.gif"
+            alt="navbar-logo"
+          />MUNCH</a>
+        </div>
+
+          <!-- NAVIGATION LIST -->
+          <ul class="navbar list-unstyled">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#menuSection">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#aboutSection">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contactSection">Contact</a>
+            </li>
+          </ul>
+          
+          <!-- SHOPPING CART -->
+        <div
+        class="shoppingCart"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        <i class="fas fa-shopping-cart"></i>
+        <span class="shoppingCartAfter">0</span>
+    </div>
+
+          <!--  HAMBURGER MENU -->
+          <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <a id="scrollToTop" class="btn"><i class="fas fa-caret-up"></i></a>
+
+    <div class="container home-container">
+      <section id="homeSection" class="d-flex justify-content-center">
+        <div class="row homeRow">
+          <div class="col-lg-6 homeTxtCol">
+            <h1 class="homeHeading">
+              Delightful Bites in the Heart of London:<br />
+              <span data-text="MUNCH">MUNCH</span>
+              <br />
+            </h1>
+            <br />
+            <div class="homeBtnDiv">
+              <a href="#menuSection" class="btn homeBtn">Order Now</a>
+            </div>
+          </div>
+          <div class="col-lg-6 homeImgCol">
+            <img class="homeImg" src="./images/coffee-spin.png" alt="coffee" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <br />
+
+    <section id="menuSection">
+        <h1 class="menu-title">
+          <span><b>MENU</b></span>
+        </h1>
+        <div class="row gutters-40">
+          <div class="col-lg-4 col-sm-4 col-4">
+            <div class="product-box-layout4 drinks">
+              <div class="item-figure">
+                <img
+                  src="/images/coffee.jpg"
+                  alt="Menu"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="item-content">
+                <h2 class="card-title">Drinks</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-4 col-4">
+            <div class="product-box-layout4 food">
+              <div class="item-figure">
+                <img
+                  src="/images/breakfast.png"
+                  alt="Menu"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="item-content">
+                <h2 class="card-title">Food</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-sm-4 col-4">
+            <div class="product-box-layout4 desserts">
+              <div class="item-figure">
+                <img
+                  src="/images/croissant.jpg"
+                  alt="Menu"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="item-content">
+                <h2 class="card-title">Desserts</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MENU STARTS HERE -->
+        <div class="menuDiv">
+          <!-- MODAL -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row paymentInfoRow">
+                      <div class="col paymentInfo">
+                        <span class="checkIcon"
+                          ><i class="fas fa-check-circle"></i
+                        ></span>
+                        Select Menu
+                      </div>
+                      <div class="col paymentInfo">
+                        <span class="checkIcon"
+                          ><i class="fa-brands fa-whatsapp"></i
+                        ></span>
+                        Place order via Whatsapp
+                      </div>
+                      <div class="col paymentInfo">
+                        <span class="checkIcon"
+                          ><i class="fa-brands fa-google-pay"></i>
+                        </span>
+                        Pay using Google Pay.
+                      </div>
+                    </div>
+
+                    <hr class="cartHr" />
+
+                    <div class="cartContentDiv">
+                      <h1>Your Cart is Empty</h1>
+                    </div>
+
+                    <div class="userInfoDiv">
+                      <div class="mb-3 px-2">
+                        <label for="address">Address *</label> <br />
+                        <textarea
+                          type="text"
+                          class="form-control"
+                          id="address"
+                        ></textarea>
+                      </div>
+                      <div class="mb-3 px-2">
+                        <label for="note">Note (optional)</label> <br />
+                        <textarea
+                          type="text"
+                          class="form-control"
+                          id="note"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="totalAmountDiv"></div>
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="location.reload()"
+                  >
+                    Clear Cart
+                  </button>
+                  <a class="btn btn-primary" onclick="openWhatsapp()">
+                    Order Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="drinks">
+            <div class="row menuHeading">
+              <div class="col-12">
+                <h1>Drinks</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-12">
+                <div class="card">
+                  <h2 class="card-title">Hot Drinks</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Espresso
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.90
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Doppio
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.10
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Macchiato
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.10
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Americano
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.20
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Cappuccino
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.90
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Cafe Latte
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>3.10
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Black Tea
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.60
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Milk
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>0.90
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="card">
+                  <h2 class="card-title">Cold Drinks</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Fresh Juice
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>3.60
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Mango Lassi
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>3.90
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Peanut Butter Banana Smoothie
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.90
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Orange Juice from Concentrate
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.20
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Mineral Water
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.80
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Can of Soda
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.90
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Lemon w/ Honey
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Fresh Lemonade
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row checkOutRow">
+              <button
+                type="button"
+                class="btn knowMoreBtn"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+              </button>
+            </div>
+          </div>
+
+          <div id="food">
+            <div class="row menuHeading">
+              <div class="col-12">
+                <h1>Food</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="card">
+                  <h2 class="card-title">Breakfast</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Banana Blueberry Waffles
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>7.00
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Strawberry Banana Smoothie
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>8.00
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Veggie Tomato Tortillas<span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.00
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Smashed Avo on Toast
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>230
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Mushroom & Bean Wrap
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>220
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Egg & Cheese on Toast
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>230
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Fluffy Pancakes
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>230
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Veggie Omelette
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>5.20
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="card">
+                  <h2 class="card-title">Lunch</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Chilli Potato<span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Veg Spring Rolls
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>5.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Chilli Vegan Hot Dog
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>5.80
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Vegetable Rice
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.80
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Crispy Honey Veggie Rolls<span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.60
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Black-bean & Mushroom Wraps<span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>7.80
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Baked Chicken Wings<span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.20
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Veggie Noodles<span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.40
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+
+                    <div class="row foodItem"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <h2 class="card-title">Sides</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Garlic Mushrooms<span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Sweet Potato Wedges
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>3.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          French Fries
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>3.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Mixed Vegetable Sauce
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.70
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Stir Fried Asian Greens<span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.70
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Classic Mixed Vegetables
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.95
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Crispy Halloumi
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>7.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Shredded Soy-Chicken
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>6.40
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row checkOutRow">
+              <button
+                type="button"
+                class="btn knowMoreBtn"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+              </button>
+            </div>
+          </div>
+
+          <div id="desserts">
+            <div class="row menuHeading">
+              <div class="col-12">
+                <h1>Desserts</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-12">
+                <div class="card">
+                  <h2 class="card-title">Desserts</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Waffles
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Pancakes
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Ice-cream<span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="veg-icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>3.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Carrot Cake
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.70
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Chocolate Cake
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.70
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>
+                          Fruit Salad
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>4.70
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-12">
+                <div class="card">
+                  <h2 class="card-title">Pastries</h2>
+                  <div class="card-body">
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>Croissant
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.20
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>Pan de Chocolat
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>Chocolate & Strawberry Crepe
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.40
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>Apple Turnover
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.40
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>Custard Tart
+                          <span>
+                            <img
+                              class="nonVegIcon"
+                              src="./images/vegetarian.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>1.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                    <hr class="foodItemHr" />
+                    <div class="row foodItem">
+                      <div class="col-9 foodItemName">
+                        <p>Peanut Butter Pastry
+                          <span>
+                            <img
+                              class="vegIcon"
+                              src="./images/vegan.png"
+                              alt="non-veg icon"
+                            />
+                          </span>
+                        </p>
+                        <p class="text-muted-small">
+                          <i class="fas fa-pound-sign"></i>2.50
+                        </p>
+                      </div>
+                      <div class="col-3 addCol">
+                        <span class="menuBtn minus"
+                          ><i class="fas fa-minus"></i
+                        ></span>
+                        <span class="quantity">0</span>
+                        <span class="menuBtn plus"
+                          ><i class="fas fa-plus"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row checkOutRow">
+              <button
+                type="button"
+                class="btn knowMoreBtn"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                <i class="fas fa-shopping-cart"></i> Go to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutSection">
+      <span class="about-title">
+        <h1><b>ABOUT US</b></h1>
+      </span>
+      <br>
+      <p>What do we stand for?</p>
+      <br>
+      <div class="eatSure container">
+        <div class="row">
+          <div class="col-sm-2 col-12">
+            <img
+              src="images/Food_Standards_Agency.png"
+              width="100px"
+              alt="eat-sure logo"
+            />
+          </div>
+
+          <div class="col-sm-2 col-6 borderLeft">
+            <div class="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Capa_1"
+                enable-background="new 0 0 515.556 515.556"
+                height="512px"
+                viewBox="0 0 515.556 515.556"
+                width="512px"
+              >
+                <g>
+                  <path
+                    d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"
+                    data-original="#000000"
+                    class="active-path"
+                    data-old_color="#000000"
+                    fill="#FFFFFF"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text">100% fresh and organic produce</div>
+          </div>
+
+          <div class="col-sm-2 col-6 borderLeft">
+            <div class="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Capa_1"
+                enable-background="new 0 0 515.556 515.556"
+                height="512px"
+                viewBox="0 0 515.556 515.556"
+                width="512px"
+              >
+                <g>
+                  <path
+                    d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"
+                    data-original="#000000"
+                    class="active-path"
+                    data-old_color="#000000"
+                    fill="#FFFFFF"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text">No artificial colours or flavours</div>
+          </div>
+
+          <div class="col-sm-2 col-6 borderLeft">
+            <div class="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Capa_1"
+                enable-background="new 0 0 515.556 515.556"
+                height="512px"
+                viewBox="0 0 515.556 515.556"
+                width="512px"
+              >
+                <g>
+                  <path
+                    d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"
+                    data-original="#000000"
+                    class="active-path"
+                    data-old_color="#000000"
+                    fill="#FFFFFF"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text">Medically certified kitchen staff</div>
+          </div>
+
+          <div class="col-sm-2 col-6 borderLeft">
+            <div class="icon-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Capa_1"
+                enable-background="new 0 0 515.556 515.556"
+                height="512px"
+                viewBox="0 0 515.556 515.556"
+                width="512px"
+              >
+                <g>
+                  <path
+                    d="m0 274.226 176.549 176.886 339.007-338.672-48.67-47.997-290.337 290-128.553-128.552z"
+                    data-original="#000000"
+                    class="active-path"
+                    data-old_color="#000000"
+                    fill="#FFFFFF"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="text">200+ stringent quality checks</div>
+          </div>
+
+          <div class="col-sm-2 col-12 borderLeft">
+            <a
+              href="#"
+              target="_blank"
+              class="btn knowMoreBtn"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container safetyMeasuresDiv">
+        <div class="row safetyMeasures">
+          <div class="col-sm-3 col-6">
+            <img
+              src="./svg/mask.svg"
+              alt="Our Kitchen executives have been instructed to wear masks at all times."
+            />
+            <small>
+              Our kitchen executives wear masks at all
+              times.
+            </small>
+          </div>
+
+          <div class="col-sm-3 col-6">
+            <img
+              src="./svg/thermo.svg"
+              alt="A daily log of our executives’ body temperatures is being maintained."
+            />
+            <small>
+              A daily log of our executives' body temperatures is being 
+              maintained.
+            </small>
+          </div>
+
+          <div class="col-sm-3 col-6">
+            <img
+              src="./svg/sanitizer.svg"
+              alt="Every kitchen executive sanitizes his/her hands every hour."
+            />
+            <small>
+              Every kitchen executive sanitizes his/her hands every hour.
+            </small>
+          </div>
+
+          <div class="col-sm-3 col-6">
+            <img
+              src="./svg/clean.svg"
+              alt="Every kitchen surface is rigorously cleaned to ensure a sanitized workstation."
+            />
+            <small>
+              Every workstation is rigorously cleaned to ensure a 
+              sanitized space.
+            </small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonialsSection" class="testimonials">
+      <h1 class="about-title">
+        <span><b>TESTIMONIALS</b></span>
+      </h1>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <p class="mb-4 pb-2 mb-md-5 pb-md-0"></p>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="images/profile-1.png"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+              alt="profile image"
+            />
+          </div>
+          <h5 class="mb-3">Max Matthews</h5>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>
+            Great Service, speedy Delivery and even better taste.
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="images/profile-2.png"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+              alt="person"
+            />
+          </div>
+          <h5 class="mb-3">Olivia Roberts</h5>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>Fresh food in the heart of London. What more can you want?
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="images/profile-3.png"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+              alt="person"
+            />
+          </div>
+          <h5 class="mb-3">Peter Brown</h5>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>Awesome food at an affordable price - 100% recommend!
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="far fa-star fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+
+    <section id="contactSection">
+      <div class="content">
+        <h1 class="menu-title">
+          <span><b>CONTACT US</b></span>
+        </h1>
+        <p>We would love to hear from you!</p>
+      </div>
+      <div id="contactus-container" class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="text">
+              <h3>Address</h3>
+              <p>
+                MUNCH Cafe, <br />Market Street, <br />Bow, London,
+                E3 5NY
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <h3>Phone</h3>
+              <p>01234-123-123</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <h3>Email</h3>
+              <p>munchmunch@munch.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactForm">
+          <form action="">
+            <h2>Send message</h2>
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span>Full name</span>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="" required="required" />
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <textarea required="required"></textarea>
+              <span>Type your message ...</span>
+            </div>
+            <div class="inputBox">
+              <input type="submit" name="" value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- FOOTER STARTS HERE -->
+
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-9 footerHeadingCol">
+            <h2>MUNCH</h2>
+          </div>
+
+          <div class="col-3 socialMedia">
+            <a href="https://www.facebook.com/innovizeuk" class="socialMediaIcon">
+              <span><i class="fab fa-facebook-f"></i></span>
+            </a>
+            <a href="https://www.twitter.com/innovizeuk/" class="socialMediaIcon">
+              <span><i class="fab fa-twitter"></i></span>
+            </a>
+            <a href="https://www.instagram.com/innovize.uk/" class="socialMediaIcon">
+              <span><i class="fab fa-instagram"></i></span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/harridepaula/"
+              target="_blank"
+              class="socialMediaIcon"
+            >
+              <span><i class="fab fa-linkedin"></i></span></a>
+          </div>
+        </div>
+        
+        <div class="col-3 copyrightRow">
+          <p class="copyright">&copy; Copyright MUNCH All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- FONT AWESOME JS -->
+    <script
+      src="https://kit.fontawesome.com/9f6e489cf7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="./index.js"></script>
+  </body>
+
+  <!-- BOOTSTRAP JS -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- JQUERY CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- CUSTOM JS -->
+  <script src="./index.js"></script>
+
+</html>
