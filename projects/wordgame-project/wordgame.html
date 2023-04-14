@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Word Guessing Game</title>
+
+  <style>
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: rgb(78,201,229);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #game-container {
+    position: relative;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 70vw;
+    max-width: 580px;
+    box-shadow: 0px 10px 30px rgb(40, 60, 100, 0.57);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #f06292;
+    font-size: 2.5rem;
+  }
+  
+  #word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .letter-box {
+    border: 2px solid #ba68c8;
+    background-color: #e1bee7;
+    padding: 5px 10px;
+    margin: 2px;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+  
+  #message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #42a5f5;
+  }
+  
+  #attempts-remaining {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #ef5350;
+  }
+  
+  #letter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .letter-btn {
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .letter-btn:hover {
+    background-color: #4caf50;
+  }
+
+  .visited-letter {
+    opacity: 0.4;
+  }
+  
+  .letter-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  #restart-btn {
+    background-color: #7dade9;
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0px;
+    float: right;
+  }
+  
+  #restart-btn:hover {
+    background-color: #638fc4;
+  }
+
+  .level button {
+    display: inline;
+    color: white;
+    width: 32%;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px auto 40px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #easy {
+    background-color: #19c86d;
+  }
+
+  #easy:hover {
+    background-color: #09ab57;
+  }
+
+  #medium {
+    background-color: #ffa726;
+  }
+
+  #medium:hover {
+    background-color: #ed9510;
+  }
+
+  #hard {
+    background-color: #e73c3c;
+  }
+  
+  #hard:hover {
+    background-color: #cd1e1e;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+
+
+
+<body>
+  <div id="game-container">
+    <h1>Word Game</h1>
+    <div class="level">
+    <button id="easy" onclick="setDifficulty('easy')">Easy</button>
+    <button id="medium" onclick="setDifficulty('medium')">Medium</button>
+    <button id="hard" onclick="setDifficulty('hard')">Hard</button>
+    </div>
+    <div id="word-container"></div>
+    <div id="message"></div>
+    <div id="attempts-remaining"></div>
+    <div id="letters">
+      <p id="message" class="hidden">Click a letter to guess:</p>
+      <div id="letter-container"></div>
+    </div>
+    <div class="footer">
+    <button id="restart-btn" class="hidden">Restart</button>
+    </div>
+  </div>
+
+
+
+  <script>
+    const words = ['apple', 'banana', 'grapefruit', 'kiwi', 'mango', 'orange', 'strawberry'];
+let maxAttempts = 10;
+let attempts = maxAttempts;
+let guessedLetters = new Set();
+let currentWord;
+
+function initializeGame() {
+  currentWord = words[Math.floor(Math.random() * words.length)];
+  guessedLetters.clear();
+  attempts = maxAttempts;
+  displayWord();
+  displayMessage('');
+  displayAttemptsRemaining();
+  createLetterButtons();
+  resetLetterColors(); // Add this line to reset letter colors
+}
+
+function displayWord() {
+  const wordContainer = document.getElementById('word-container');
+  wordContainer.innerHTML = '';
+
+  for (const letter of currentWord) {
+    const letterBox = document.createElement('span');
+    letterBox.classList.add('letter-box');
+
+    if (guessedLetters.has(letter)) {
+      letterBox.textContent = letter;
+    } else {
+      letterBox.textContent = '_';
+    }
+
+    wordContainer.appendChild(letterBox);
+  }
+}
+
+function showGameElements() {
+  const restartButton = document.getElementById('restart-btn');
+  const messageElement = document.getElementById('message');
+
+  restartButton.classList.remove('hidden');
+  messageElement.classList.remove('hidden');
+}
+
+function displayMessage(text) {
+  const messageElement = document.getElementById('message');
+  messageElement.textContent = text;
+}
+
+function displayAttemptsRemaining() {
+  const attemptsElement = document.getElementById('attempts-remaining');
+  attemptsElement.textContent = `Attempts remaining: ${attempts}`;
+}
+
+function createLetterButtons() {
+  const letterContainer = document.getElementById('letter-container');
+  letterContainer.innerHTML = '';
+  
+    for (let i = 97; i <= 122; i++) {
+      const letter = String.fromCharCode(i);
+      const button = document.createElement('button');
+      button.classList.add('letter-btn');
+      button.textContent = letter;
+      button.setAttribute('data-letter', letter);
+      button.addEventListener('click', () => handleLetterClick(letter));
+      letterContainer.appendChild(button);
+    }
+  }
+
+  function handleLetterClick(letter) {
+    if (guessedLetters.has(letter) || attempts === 0) {
+      return;
+    }
+  
+    guessedLetters.add(letter);
+    const clickedButton = document.querySelector(`.letter-btn[data-letter="${letter}"]`);
+    clickedButton.classList.add('visited-letter');
+  
+    if (currentWord.includes(letter)) {
+      displayWord();
+      checkForWin();
+    } else {
+      attempts--;
+      displayAttemptsRemaining();
+      checkForLoss();
+    }
+  }
+
+  function resetLetterColors() {
+    const letterButtons = document.querySelectorAll('.letter-btn');
+    letterButtons.forEach(button => button.classList.remove('visited-letter'));
+  }
+
+function checkForWin() {
+  if (Array.from(currentWord).every(letter => guessedLetters.has(letter))) {
+    displayMessage('Congratulations! You guessed the word!');
+    disableButtons();
+  }
+}
+
+function checkForLoss() {
+  if (attempts === 0) {
+    displayMessage('Game over! Better luck next time!');
+    disableButtons();
+  }
+}
+
+function disableButtons() {
+  const buttons = document.getElementsByClassName('letter-btn');
+
+  for (const button of buttons) {
+    button.disabled = true;
+  }
+}
+
+function addRestartButtonListener() {
+  const restartButton = document.getElementById('restart-btn');
+  restartButton.addEventListener('click', () => {
+    initializeGame();
+    enableButtons();
+  });
+}
+
+function enableButtons() {
+  const buttons = document.getElementsByClassName('letter-btn');
+
+  for (const button of buttons) {
+    button.disabled = false;
+  }
+}
+
+function setDifficulty(difficulty) {
+  switch (difficulty) {
+    case 'easy':
+      maxAttempts = 15;
+      break;
+    case 'medium':
+      maxAttempts = 10;
+      break;
+    case 'hard':
+      maxAttempts = 5;
+      break;
+  }
+
+  showGameElements(); // Add this line to show the restart button and message
+  initializeGame();
+}
+
+addRestartButtonListener();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wandermap - Pin Your Dreams, Plan Your Adventures.</title>
+
+
+
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.7/dist/geosearch.css" />
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.7/dist/geosearch.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <!-- STYLES -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        .header {
+            position: absolute;
+            z-index: 1000;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 38%;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 500;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: 300;
+        }
+        .navigation {
+            margin-top: 10px;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        .navigation a:hover {
+            color: #3b8cff;
+        }
+        .search-container {
+            display: flex;
+            margin-top: 10px;
+        }
+        .search-input {
+            display: flex;
+            border: 1px solid #333;
+            border-radius: 20px 0 0 20px;
+            padding: 5px 10px;
+            font-size: 16px;
+            width: 100%;
+            outline: none;
+        }
+        .search-button {
+            display: flex;
+            background-color: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 15px 5px 15px;
+            border-radius: 0 20px 20px 0;
+            outline: none;
+            }
+        .leaflet-control-geosearch form {
+            height: 30px;
+        }
+        #itinerary-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 1000;
+        }
+        #itinerary-container h3 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        #itinerary-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        #itinerary-container li {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 5px;
+        }
+        #itinerary-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .action-button {
+            display: inline;
+            background-color: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            outline: none;
+            margin-right: 5px;
+        }
+        .refresh-button {
+            display: inline;
+            background-color: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 15px 5px 15px;
+            border-radius: 20px;
+            outline: none;
+            margin-right: 5px;
+        }
+        #itinerary-container .close-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 16px;
+            color: #333;
+            cursor: pointer;
+        }
+        #itinerary-container.visible {
+            display: block;
+        }
+        #itinerary-container:not(.visible) {
+            display: none;
+        }
+        .itinerary-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .visible.itinerary-icon {
+            display: none;
+        }
+
+        @media only screen and (max-width: 800px) {
+        .header {
+            width: 60%;
+        }
+        }
+    </style>
+</head>
+
+
+
+
+<!-- BODY -->
+<body>
+    <div id="map"></div>
+    <div class="header">
+        <img src="./logo.png" width="150px">
+        <p>Pin Your Dreams, Plan Your Adventures.</p>
+        <div class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Preferences</a>
+            <a href="itinerary.html">Itinerary</a>
+            <a href="#">About</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search for a city..." list="suggested-cities">
+            <datalist id="suggested-cities"></datalist>
+            <button id="search-button" class="search-button">Search</button>
+        </div>
+    </div>
+    <div id="itinerary-container">
+        <span class="close-icon">&times;</span>
+        <h3>Suggested Itinerary</h3>
+        <ul id="itinerary-list"></ul>
+        <div id="no-attractions-message" style="display: none; color: red; margin-bottom: 10px;">
+            No attractions found. Please search in another area.
+        </div>
+        <div>
+            <button id="save-button" class="action-button"><i class="fas fa-heart"></i> Save</button>
+            <button id="refresh-button" class="refresh-button"><i class="fas fa-sync-alt"></i> Refresh</button>
+        </div>
+    </div>
+    <i id="itinerary-icon" class="fas fa-map-marked-alt itinerary-icon"></i>
+    
+
+
+
+
+<!-- SCRIPT -->
+<script>
+    // Initialize the map and set view
+    var map = L.map('map').setView([0, 0], 2);
+
+    // Add base map layer
+    var baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
+    }).addTo(map);
+
+    // Initialize geosearch provider
+    const provider = new GeoSearch.OpenStreetMapProvider();
+
+    // Foursquare API credentials
+    const CLIENT_ID = 'CYOAQIJ1YQSUQOKS05C533P1M0NLVVQBV12W13FF3POK05RM';
+    const CLIENT_SECRET = 'TUSRKZF3LFJHVZ3ISET5VU4SBRDGOTS4KLNV2QEG3YGSPFFS';
+
+    // Function to perform search and update the map view
+    async function performSearch() {
+        const query = searchInput.value;
+        const results = await provider.search({ query });
+
+        if (results && results.length > 0) {
+            const { x, y } = results[0];
+            map.setView([y, x], 13);
+
+            // Fetch itinerary from Foursquare API
+            fetchItinerary(y, x);
+        }
+    }
+
+    // Function to fetch and display city suggestions
+    async function updateCitySuggestions() {
+        const query = searchInput.value;
+        const results = await provider.search({ query });
+
+        const dataList = document.getElementById('suggested-cities');
+        dataList.innerHTML = '';
+
+        results.forEach(result => {
+            const option = document.createElement('option');
+            option.value = result.label;
+            dataList.appendChild(option);
+        });
+    }
+
+    // Function to fetch and display an itinerary from API
+    async function fetchItinerary(lat, lng) {
+    const lang = 'en';
+    const radius = 1000;
+    const limit = 50;
+    const apiKey = '43765e99a7msh014f98142cae4f4p167acdjsnc95c024d9418';
+    const apiUrl = `https://opentripmap-places-v1.p.rapidapi.com/${lang}/places/radius?radius=${radius}&lon=${lng}&lat=${lat}&rate=3&limit=${limit}`;
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': apiKey,
+            'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = await fetch(apiUrl, options);
+        const data = await response.json();
+        console.log(data); // Log the data
+
+        const noAttractionsMessage = document.getElementById('no-attractions-message');
+
+        if (data.features && data.features.length > 0) {
+            const shuffledItems = shuffleArray(data.features);
+            const itineraryItems = shuffledItems.slice(0, 8);
+            displayItinerary(itineraryItems);
+            noAttractionsMessage.style.display = 'none';
+        } else {
+            noAttractionsMessage.style.display = 'block';
+        }
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+    function shuffleArray(array) {
+        // Fisher-Yates shuffle algorithm
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Function to display the fetched itinerary
+    function displayItinerary(itineraryItems) {
+        const itineraryList = document.getElementById('itinerary-list');
+        itineraryList.innerHTML = '';
+
+        if (itineraryItems.length > 0) {
+            itineraryItems.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                const categoryName = item.properties.kinds ? item.properties.kinds.split(',')[0].replace(/_/g, ' ') : '';
+                listItem.textContent = `${index + 1}. ${item.properties.name} (${categoryName})`;
+                itineraryList.appendChild(listItem);
+            });
+        } else {
+            const noAttractionsMessage = document.createElement('li');
+            noAttractionsMessage.style.color = 'red';
+            noAttractionsMessage.textContent = 'No attractions found. Please search in another area';
+            itineraryList.appendChild(noAttractionsMessage);
+        }
+
+        document.getElementById('itinerary-container').style.display = 'block';
+    }
+
+    // Get search input and add event listeners
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+    performSearch();
+    }
+    });
+
+    searchInput.addEventListener('input', function () {
+    updateCitySuggestions();
+    });
+
+    // Get search button and add event listener for click event
+    const searchButton = document.getElementById('search-button');
+    searchButton.addEventListener('click', function () {
+    performSearch();
+    });
+
+    // Get save button and add event listener for click event
+    const saveButton = document.getElementById('save-button');
+    saveButton.addEventListener('click', function () {
+    // Save itinerary logic goes here
+    alert('Itinerary saved!');
+    });
+
+    // Get refresh button and add event listener for click event
+    const refreshButton = document.getElementById('refresh-button');
+    refreshButton.addEventListener('click', function () {
+    // Refresh itinerary logic goes here
+    const coords = map.getCenter();
+    fetchItinerary(coords.lat, coords.lng);
+    const itineraryList = document.getElementById('itinerary-list');
+    itineraryList.innerHTML = '';
+    document.getElementById('itinerary-container').style.display = 'none';
+    });
+
+    //Open and close itinerary modal
+    const itineraryContainer = document.getElementById('itinerary-container');
+        const closeIcon = document.querySelector('#itinerary-container .close-icon');
+        const itineraryIcon = document.getElementById('itinerary-icon');
+        const toggleItinerary = () => {
+    if (itineraryContainer.style.display === 'none') {
+        itineraryContainer.style.display = 'block';
+        itineraryIcon.style.display = 'none';
+    } else {
+        itineraryContainer.style.display = 'none';
+        itineraryIcon.style.display = 'block';
+    }
+};
+
+    // Open itinerary container
+    itineraryIcon.addEventListener('click', toggleItinerary);
+
+    // Close itinerary container
+    closeIcon.addEventListener('click', toggleItinerary);
+
+</script>
+
+</body>
+</html>

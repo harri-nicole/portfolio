@@ -542,7 +542,7 @@ transform: rotate(45deg);
   height: 10px;
 }
 
-.text {
+.text, section#aboutSection small {
   margin-top: 10px;
 }
 
